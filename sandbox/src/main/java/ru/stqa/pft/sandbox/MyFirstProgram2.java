@@ -18,7 +18,7 @@ public class MyFirstProgram2 {
     System.out.println("Расстояние между точками р1 и р2 = " + p1.distance(p2));
 
     Circle x = new Circle( 4);
-    
+
     System.out.println("Площадь круга с радиусом " + x.r + " = " + x.circle());
 
     Triangle t = new Triangle(2, 4, 3);
