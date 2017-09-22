@@ -11,6 +11,7 @@ import org.openqa.selenium.remote.BrowserType;
 import ru.stqa.pft.addressbook.tests.ContactHelper;
 
 
+import java.util.Objects;
 import java.util.concurrent.TimeUnit;
 
 public class ApplicationManager {
@@ -27,11 +28,11 @@ public class ApplicationManager {
   }
 
   public void init() {
-    if (browser == BrowserType.FIREFOX) {
+    if (Objects.equals(browser, BrowserType.FIREFOX)) {
       wd = new FirefoxDriver(new FirefoxOptions().setLegacy(true).setBinary("C:/Tools/Firefox/firefox.exe"));
-    } else if (browser == BrowserType.CHROME) {
+    } else if (Objects.equals(browser, BrowserType.CHROME)) {
       wd = new ChromeDriver();
-    } else if (browser == BrowserType.IE) {
+    } else if (Objects.equals(browser, BrowserType.IE)) {
       wd = new InternetExplorerDriver();
     }
     wd.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
