@@ -9,6 +9,9 @@ public class ContactModificationTests extends TestBase {
   public void testContactModification() {
 
     app.getNavigationHelper().gotoHomePage();
+    if (! app.getContactHelper().isThereAContact()) {
+      app.getContactHelper().createContact(new ContactData("test1", null, null, "Slick", "test1"), true);
+    }
     app.getContactHelper().selectModifiedContact();
     app.getContactHelper().fillContactForm(new ContactData("test1", "test2", "test3", "test4", null), false);
     app.getContactHelper().initContactModification();
