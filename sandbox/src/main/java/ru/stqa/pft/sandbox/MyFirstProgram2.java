@@ -21,7 +21,7 @@ public class MyFirstProgram2 {
 
     System.out.println("Площадь круга с радиусом " + x.r + " = " + x.circle());
 
-    Triangle t = new Triangle(2, 4, 3);
+    Triangle t = new Triangle(8, 5, 10);
     System.out.println("Площадь треугальника со стронами " + " a " + " b " + " c " + " = " + t.geron());
   }
 
