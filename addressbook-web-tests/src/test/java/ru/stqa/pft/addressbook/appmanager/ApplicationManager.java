@@ -8,7 +8,6 @@ import org.openqa.selenium.firefox.FirefoxOptions;
 
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.BrowserType;
-import ru.stqa.pft.addressbook.tests.ContactHelper;
 
 
 import java.util.Objects;
