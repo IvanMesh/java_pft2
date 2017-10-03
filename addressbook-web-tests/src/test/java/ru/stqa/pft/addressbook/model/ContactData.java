@@ -45,4 +45,35 @@ public class ContactData {
     return email;
   }
 
+  @Override
+  public String toString() {
+    return "ContactData{" +
+            "name='" + name + '\'' +
+            ", lastname='" + lastname + '\'' +
+            ", address='" + address + '\'' +
+            ", group='" + group + '\'' +
+            '}';
+  }
+
+  @Override
+  public boolean equals(Object o) {
+    if (this == o) return true;
+    if (o == null || getClass() != o.getClass()) return false;
+
+    ContactData that = (ContactData) o;
+
+    if (name != null ? !name.equals(that.name) : that.name != null) return false;
+    if (!lastname.equals(that.lastname)) return false;
+    if (!address.equals(that.address)) return false;
+    return group.equals(that.group);
+  }
+
+  @Override
+  public int hashCode() {
+    int result = name != null ? name.hashCode() : 0;
+    result = 31 * result + lastname.hashCode();
+    result = 31 * result + address.hashCode();
+    result = 31 * result + group.hashCode();
+    return result;
+  }
 }
