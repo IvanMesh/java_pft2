@@ -13,7 +13,7 @@ public class ContactDelitionTests extends TestBase{
   public void ensurePreconditions() {
     app.goTO().homePage();
     if (! app.contact().isThereAContact()) {
-      app.contact().create(new ContactData("test1", null, null, "Slick", "test1"), true);
+      app.contact().create(new ContactData().withName("test1").withLastName("Slick").withAddress("Meow"), true);
     }
   }
 

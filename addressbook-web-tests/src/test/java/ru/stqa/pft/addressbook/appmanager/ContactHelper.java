@@ -1,13 +1,10 @@
 package ru.stqa.pft.addressbook.appmanager;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
-import ru.stqa.pft.addressbook.appmanager.HelperBase;
 import ru.stqa.pft.addressbook.model.ContactData;
 
 import java.util.ArrayList;
@@ -105,7 +102,7 @@ public class ContactHelper extends HelperBase {
       String allPhones = element.findElement(By.xpath(".//td[6]")).getText();
       String allMails = element.findElement(By.xpath(".//td[5]")).getText();
       int id = Integer.parseInt(element.findElement(By.tagName("input")).getAttribute("value"));
-      ContactData contact = new ContactData(id, firstname, lastname, address, null, null);
+      ContactData contact = new ContactData().withId(id).withName(firstname).withLastName(lastname).withAddress(address);
       contacts.add(contact);
     }
     return contacts;
