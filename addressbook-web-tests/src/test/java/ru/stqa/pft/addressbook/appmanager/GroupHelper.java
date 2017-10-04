@@ -50,6 +50,16 @@ public class GroupHelper extends HelperBase {
     submitGroupForm();
     returnToGroupPage();
   }
+
+
+  public void modifyGroup(int index, GroupData group) {
+    selectGroup(index);
+    initGroupModification();
+    fillGroupForm(group);
+    submitGroupModification();
+    returnToGroupPage();
+  }
+
   public void returnToGroupPage() {
     if (isElementPresent(By.tagName("h1")) && wd.findElement(By.tagName("h1")).getText().equals("Groups")
             && isElementPresent(By.name("new"))) {

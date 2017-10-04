@@ -14,10 +14,6 @@ public class ContactCreationTests extends TestBase{
   @Test
   public void testContactCreation() {
 
-    app.getNavigationHelper().gotoGroupPage();
-    if (! app.getGroupHelper().isThereAGroup()) {
-      app.getGroupHelper().createGroup(new GroupData("test1", null, null));
-    }
     app.getNavigationHelper().gotoHomePage();
     List<ContactData> before = app.getContactHelper().getContactList();
     app.getNavigationHelper().gotoAddNewContact();
@@ -27,8 +23,10 @@ public class ContactCreationTests extends TestBase{
     List<ContactData> after = app.getContactHelper().getContactList();
     Assert.assertEquals(after.size(), before.size() + 1);
 
-    contact.setId(after.stream().max(Comparator.comparingInt(ContactData::getId)).get().getId());
     before.add(contact);
-    Assert.assertEquals(new HashSet<>(before), new HashSet<>(after));
+    Comparator<? super ContactData> byId = ((o1, o2) -> Integer.compare(o1.getId(), o2.getId()));
+    before.sort(byId);
+    after.sort(byId);
+    Assert.assertEquals(before, after);
   }
 }
