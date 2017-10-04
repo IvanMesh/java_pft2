@@ -3,7 +3,6 @@ package ru.stqa.pft.addressbook.tests;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import ru.stqa.pft.addressbook.model.ContactData;
 import ru.stqa.pft.addressbook.model.GroupData;
 
 import java.util.Comparator;
@@ -17,14 +16,14 @@ public class GroupCreationTests extends TestBase {
   @Test
   public void testGroopCreation() {
 
-    app.getNavigationHelper().gotoGroupPage();
-    List<GroupData> before = app.getGroupHelper().getGroupList();
-    app.getGroupHelper().initGroupCreation();
+    app.goTO().GroupPage();
+    List<GroupData> before = app.group().list();
+    app.group().initGroupCreation();
     GroupData group = new GroupData("test1", null, null);
-    app.getGroupHelper().fillGroupForm(group);
-    app.getGroupHelper().submitGroupForm();
-    app.getNavigationHelper().returnToGroupPage();
-    List<GroupData> after = app.getGroupHelper().getGroupList();
+    app.group().fillGroupForm(group);
+    app.group().submitGroupForm();
+    app.goTO().groupPage();
+    List<GroupData> after = app.group().list();
     Assert.assertEquals(after.size(), before.size() + 1);
 
     before.add(group);
