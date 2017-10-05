@@ -105,7 +105,7 @@ public class ContactHelper extends HelperBase {
     if (contactCash != null) {
       return new Contacts(contactCash);
     }
-    Contacts contacts = new Contacts();
+    contactCash = new Contacts();
     List<WebElement> elements = wd.findElements(By.name("entry"));
     for (WebElement element : elements) {
       String lastname = element.findElement(By.xpath(".//td[2]")).getText();
