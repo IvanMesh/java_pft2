@@ -8,10 +8,7 @@ import org.testng.Assert;
 import ru.stqa.pft.addressbook.model.ContactData;
 import ru.stqa.pft.addressbook.model.Contacts;
 
-import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 public class ContactHelper extends HelperBase {
 
@@ -42,6 +39,7 @@ public class ContactHelper extends HelperBase {
     gotoHomePage();
     selectContactById(contact.getId());
     delete();
+    contactCash = null;
     gotoHomePage();
   }
 
@@ -70,6 +68,7 @@ public class ContactHelper extends HelperBase {
     gotoAddNewContact();
     fillContactForm(contact, b);
     submitContactCreation();
+    contactCash = null;
     gotoHomePage();
   }
 
@@ -78,6 +77,7 @@ public class ContactHelper extends HelperBase {
     initContactModificationById(contact.getId());
     fillContactForm(contact, false);
     initContactModification();
+    contactCash = null;
     gotoHomePage();
   }
 
@@ -99,23 +99,12 @@ public class ContactHelper extends HelperBase {
     return isElementPresent(By.name("selected[]"));
   }
 
-  public List<ContactData> list() {
-    List<ContactData> contacts = new ArrayList<>();
-    List<WebElement> elements = wd.findElements(By.name("entry"));
-    for (WebElement element : elements) {
-      String lastname = element.findElement(By.xpath(".//td[2]")).getText();
-      String firstname = element.findElement(By.xpath(".//td[3]")).getText();
-      String address = element.findElement(By.xpath(".//td[4]")).getText();
-      String allPhones = element.findElement(By.xpath(".//td[6]")).getText();
-      String allMails = element.findElement(By.xpath(".//td[5]")).getText();
-      int id = Integer.parseInt(element.findElement(By.tagName("input")).getAttribute("value"));
-      ContactData contact = new ContactData().withId(id).withName(firstname).withLastName(lastname).withAddress(address);
-      contacts.add(contact);
-    }
-    return contacts;
-  }
+  private Contacts contactCash = null;
 
   public Contacts all() {
+    if (contactCash != null) {
+      return new Contacts(contactCash);
+    }
     Contacts contacts = new Contacts();
     List<WebElement> elements = wd.findElements(By.name("entry"));
     for (WebElement element : elements) {
@@ -125,9 +114,8 @@ public class ContactHelper extends HelperBase {
       String allPhones = element.findElement(By.xpath(".//td[6]")).getText();
       String allMails = element.findElement(By.xpath(".//td[5]")).getText();
       int id = Integer.parseInt(element.findElement(By.tagName("input")).getAttribute("value"));
-      ContactData contact = new ContactData().withId(id).withName(firstname).withLastName(lastname).withAddress(address);
-      contacts.add(contact);
+      contactCash.add(new ContactData().withId(id).withName(firstname).withLastName(lastname).withAddress(address));
     }
-    return contacts;
+    return new Contacts(contactCash);
   }
 }
