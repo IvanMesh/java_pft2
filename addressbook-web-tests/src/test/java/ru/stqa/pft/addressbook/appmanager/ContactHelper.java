@@ -120,11 +120,11 @@ public class ContactHelper extends HelperBase {
       String address = element.findElement(By.xpath(".//td[4]")).getText();
       String allMails = element.findElement(By.xpath(".//td[5]")).getText();
       int id = Integer.parseInt(element.findElement(By.tagName("input")).getAttribute("value"));
-      String[] allPhones = element.findElement(By.xpath(".//td[6]")).getText().split("\n");
-      /* Код для тестирования телефонных номеров
+      String allPhones = element.findElement(By.xpath(".//td[6]")).getText();
+
       contactCash.add(new ContactData().withId(id).withName(firstname).withLastName(lastname).withAddress(address)
-              .withHomePhone(allPhones[0]).withMobilePhone(allPhones[1]).withWorkPhone(allPhones[2]));*/
-      contactCash.add(new ContactData().withId(id).withName(firstname).withLastName(lastname).withAddress(address));
+              .withAllPhones(allPhones));
+
     }
     return new Contacts(contactCash);
   }
