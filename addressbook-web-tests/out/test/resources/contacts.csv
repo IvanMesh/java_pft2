@@ -1,10 +1,1 @@
-name 0;lastname 0;111;222;333;email@;email2@;email3;address 0
-name 1;lastname 1;111;222;333;email@;email2@;email3;address 1
-name 2;lastname 2;111;222;333;email@;email2@;email3;address 2
-name 3;lastname 3;111;222;333;email@;email2@;email3;address 3
-name 4;lastname 4;111;222;333;email@;email2@;email3;address 4
-name 5;lastname 5;111;222;333;email@;email2@;email3;address 5
-name 6;lastname 6;111;222;333;email@;email2@;email3;address 6
-name 7;lastname 7;111;222;333;email@;email2@;email3;address 7
-name 8;lastname 8;111;222;333;email@;email2@;email3;address 8
-name 9;lastname 9;111;222;333;email@;email2@;email3;address 9
+name 0;lastname 0;111 0;222 0;333 0;email@0.ru;email2@0.com;email3@0.ru;address 0;test1
