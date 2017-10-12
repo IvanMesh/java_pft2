@@ -42,9 +42,9 @@ public class ContactDataGenerator {
   private void save(List<ContactData> contacts, File file) throws IOException {
     Writer writer = new FileWriter(file);
     for (ContactData contact : contacts) {
-      writer.write(String.format("%s;%s;%s;%s;%s;%s;%s;%s;%s;%s\n", contact.getName(), contact.getLastname(), contact.getHomePhone()
+      writer.write(String.format("%s;%s;%s;%s;%s;%s;%s;%s;%s\n", contact.getName(), contact.getLastname(), contact.getHomePhone()
       , contact.getMobilePhone(), contact.getWorkPhone(), contact.getEmail(), contact.getEmail2(), contact.getEmail3()
-      ,contact.getAddress(), contact.getGroup()));
+      ,contact.getAddress()));
     }
     writer.close();
   }
@@ -55,7 +55,7 @@ public class ContactDataGenerator {
       contacts.add(new ContactData().withName(String.format("name %s", i)).withLastName(String.format("lastname %s", i))
               .withHomePhone(String.format("111 %s", i)).withMobilePhone(String.format("222 %s", i))
       .withWorkPhone(String.format("333 %s", i)).withEmail(String.format("email@%s.ru", i)).withEmail2(String.format("email2@%s.com", i))
-      .withEmail3(String.format("email3@%s.ru", i)).withAddress(String.format("address %s", i)).withGroup("test1"));
+      .withEmail3(String.format("email3@%s.ru", i)).withAddress(String.format("address %s", i)));
     }
     return contacts;
   }
