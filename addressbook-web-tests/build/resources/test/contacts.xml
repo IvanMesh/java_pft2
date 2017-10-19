@@ -1,0 +1,122 @@
+<list>
+  <ru.stqa.pft.addressbook.model.ContactData>
+    <id>2147483647</id>
+    <name>name 0</name>
+    <lastname>lastname 0</lastname>
+    <address>address 0</address>
+    <homePhone>111 0</homePhone>
+    <mobilePhone>222 0</mobilePhone>
+    <workPhone>333 0</workPhone>
+    <email>email@0.ru</email>
+    <email2>email2@0.com</email2>
+    <email3>email3@0.ru</email3>
+  </ru.stqa.pft.addressbook.model.ContactData>
+  <ru.stqa.pft.addressbook.model.ContactData>
+    <id>2147483647</id>
+    <name>name 1</name>
+    <lastname>lastname 1</lastname>
+    <address>address 1</address>
+    <homePhone>111 1</homePhone>
+    <mobilePhone>222 1</mobilePhone>
+    <workPhone>333 1</workPhone>
+    <email>email@1.ru</email>
+    <email2>email2@1.com</email2>
+    <email3>email3@1.ru</email3>
+  </ru.stqa.pft.addressbook.model.ContactData>
+  <ru.stqa.pft.addressbook.model.ContactData>
+    <id>2147483647</id>
+    <name>name 2</name>
+    <lastname>lastname 2</lastname>
+    <address>address 2</address>
+    <homePhone>111 2</homePhone>
+    <mobilePhone>222 2</mobilePhone>
+    <workPhone>333 2</workPhone>
+    <email>email@2.ru</email>
+    <email2>email2@2.com</email2>
+    <email3>email3@2.ru</email3>
+  </ru.stqa.pft.addressbook.model.ContactData>
+  <ru.stqa.pft.addressbook.model.ContactData>
+    <id>2147483647</id>
+    <name>name 3</name>
+    <lastname>lastname 3</lastname>
+    <address>address 3</address>
+    <homePhone>111 3</homePhone>
+    <mobilePhone>222 3</mobilePhone>
+    <workPhone>333 3</workPhone>
+    <email>email@3.ru</email>
+    <email2>email2@3.com</email2>
+    <email3>email3@3.ru</email3>
+  </ru.stqa.pft.addressbook.model.ContactData>
+  <ru.stqa.pft.addressbook.model.ContactData>
+    <id>2147483647</id>
+    <name>name 4</name>
+    <lastname>lastname 4</lastname>
+    <address>address 4</address>
+    <homePhone>111 4</homePhone>
+    <mobilePhone>222 4</mobilePhone>
+    <workPhone>333 4</workPhone>
+    <email>email@4.ru</email>
+    <email2>email2@4.com</email2>
+    <email3>email3@4.ru</email3>
+  </ru.stqa.pft.addressbook.model.ContactData>
+  <ru.stqa.pft.addressbook.model.ContactData>
+    <id>2147483647</id>
+    <name>name 5</name>
+    <lastname>lastname 5</lastname>
+    <address>address 5</address>
+    <homePhone>111 5</homePhone>
+    <mobilePhone>222 5</mobilePhone>
+    <workPhone>333 5</workPhone>
+    <email>email@5.ru</email>
+    <email2>email2@5.com</email2>
+    <email3>email3@5.ru</email3>
+  </ru.stqa.pft.addressbook.model.ContactData>
+  <ru.stqa.pft.addressbook.model.ContactData>
+    <id>2147483647</id>
+    <name>name 6</name>
+    <lastname>lastname 6</lastname>
+    <address>address 6</address>
+    <homePhone>111 6</homePhone>
+    <mobilePhone>222 6</mobilePhone>
+    <workPhone>333 6</workPhone>
+    <email>email@6.ru</email>
+    <email2>email2@6.com</email2>
+    <email3>email3@6.ru</email3>
+  </ru.stqa.pft.addressbook.model.ContactData>
+  <ru.stqa.pft.addressbook.model.ContactData>
+    <id>2147483647</id>
+    <name>name 7</name>
+    <lastname>lastname 7</lastname>
+    <address>address 7</address>
+    <homePhone>111 7</homePhone>
+    <mobilePhone>222 7</mobilePhone>
+    <workPhone>333 7</workPhone>
+    <email>email@7.ru</email>
+    <email2>email2@7.com</email2>
+    <email3>email3@7.ru</email3>
+  </ru.stqa.pft.addressbook.model.ContactData>
+  <ru.stqa.pft.addressbook.model.ContactData>
+    <id>2147483647</id>
+    <name>name 8</name>
+    <lastname>lastname 8</lastname>
+    <address>address 8</address>
+    <homePhone>111 8</homePhone>
+    <mobilePhone>222 8</mobilePhone>
+    <workPhone>333 8</workPhone>
+    <email>email@8.ru</email>
+    <email2>email2@8.com</email2>
+    <email3>email3@8.ru</email3>
+  </ru.stqa.pft.addressbook.model.ContactData>
+  <ru.stqa.pft.addressbook.model.ContactData>
+    <id>2147483647</id>
+    <name>name 9</name>
+    <lastname>lastname 9</lastname>
+    <address>address 9</address>
+    <homePhone>111 9</homePhone>
+    <mobilePhone>222 9</mobilePhone>
+    <workPhone>333 9</workPhone>
+    <email>email@9.ru</email>
+    <email2>email2@9.com</email2>
+    <email3>email3@9.ru</email3>
+  </ru.stqa.pft.addressbook.model.ContactData>
+</list>
