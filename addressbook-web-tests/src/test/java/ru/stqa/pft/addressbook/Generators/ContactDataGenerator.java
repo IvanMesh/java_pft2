@@ -21,7 +21,6 @@ public class ContactDataGenerator {
   public String file;
 
   public static void main(String[] args) throws IOException {
-
     ContactDataGenerator generator = new ContactDataGenerator();
     JCommander jCommander = new JCommander(generator);
     try {
@@ -31,7 +30,6 @@ public class ContactDataGenerator {
       return;
     }
     generator.run();
-
   }
 
   private void run() throws IOException {
