@@ -8,7 +8,8 @@
     "workPhone": "333 0",
     "email": "email@0.ru",
     "email2": "email2@0.com",
-    "email3": "email3@0.ru"
+    "email3": "email3@0.ru",
+    "photo": "src\\test\\resources\\photo.JPG"
   },
   {
     "name": "name 1",
@@ -19,6 +20,19 @@
     "workPhone": "333 1",
     "email": "email@1.ru",
     "email2": "email2@1.com",
-    "email3": "email3@1.ru"
+    "email3": "email3@1.ru",
+    "photo": "src\\test\\resources\\photo.JPG"
+  },
+  {
+    "name": "name 2",
+    "lastname": "lastname 2",
+    "address": "address 2",
+    "homePhone": "111 2",
+    "mobilePhone": "222 2",
+    "workPhone": "333 2",
+    "email": "email@2.ru",
+    "email2": "email2@2.com",
+    "email3": "email3@2.ru",
+    "photo": "src\\test\\resources\\photo.JPG"
   }
 ]

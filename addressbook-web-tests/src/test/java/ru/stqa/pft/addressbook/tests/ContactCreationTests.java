@@ -38,7 +38,6 @@ public class ContactCreationTests extends TestBase{
 
   @DataProvider
   public Iterator<Object[]> validContactsFromJson() throws IOException {
-    File photo = new File("src/test/resources/photo.JPG");
 
     try (BufferedReader reader = new BufferedReader(new FileReader(new File("src/test/resources/contacts.json")))) {
       String json = "";

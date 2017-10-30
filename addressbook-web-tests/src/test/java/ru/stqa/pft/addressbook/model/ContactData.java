@@ -1,40 +1,61 @@
 package ru.stqa.pft.addressbook.model;
 
 import com.google.gson.annotations.Expose;
+import org.hibernate.annotations.Type;
 
+import javax.persistence.*;
 import java.io.File;
-
+@Entity
+@Table(name = "addressbook")
 public class ContactData {
+  @Id
   private int id = Integer.MAX_VALUE;
   @Expose
+  @Column (name = "firstname")
   private String name;
   @Expose
+  @Column (name = "lastname")
   private String lastname;
   @Expose
+  @Type(type = "text")
   private String address;
   @Expose
   private String nickname;
   @Expose
+  @Transient
   private String group;
   @Expose
+  @Column (name = "home")
+  @Type(type="text")
   private String homePhone;
   @Expose
+  @Column (name = "mobile")
+  @Type(type="text")
   private String mobilePhone;
   @Expose
+  @Column (name = "work")
+  @Type(type="text")
   private String workPhone;
+  @Transient
   private String allPhones;
   @Expose
+  @Type(type = "text")
   private String email;
   @Expose
+  @Type(type = "text")
   private String email2;
   @Expose
+  @Type(type = "text")
   private String email3;
+  @Transient
   private String allEmails;
   @Expose
-  private File photo;
+  @Column (name = "photo")
+  @Type(type="text")
+  private String photo;
 
   public File getPhoto() {
-    return photo;
+    return new File(photo);
   }
   public String getName() {
     return name;
@@ -163,7 +184,7 @@ public class ContactData {
   }
 
   public ContactData withPhoto(File photo) {
-    this.photo = photo;
+    this.photo = photo.getPath();
     return this;
   }
 
